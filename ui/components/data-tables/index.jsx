@@ -127,7 +127,8 @@ export const ColumnTh = props => {
     'slds-is-sorted':
       props.sortDirection === 'ascending' ||
       props.sortDirection === 'descending',
-    'slds-is-sorted_asc': props.sortDirection === 'ascending',
+    'slds-is-sorted_asc':
+      props.isSortable && props.sortDirection !== 'descending',
     'slds-is-sorted_desc': props.sortDirection === 'descending'
   });
 
